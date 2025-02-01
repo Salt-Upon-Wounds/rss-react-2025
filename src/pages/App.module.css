@@ -15,6 +15,9 @@ body {
 }
 
 .header {
-  font-size: larger;
+  margin: 5px;
+  font-size: 190%;
   text-align: center;
+  color: sandybrown;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }

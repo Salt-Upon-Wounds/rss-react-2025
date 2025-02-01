@@ -37,7 +37,11 @@ export class ResultList extends Component<Props> {
   }
 
   notFound() {
-    return <p>Nothing found</p>;
+    return (
+      <li key={this.key++} className={style.elem}>
+        <p>Nothing found</p>
+      </li>
+    );
   }
 
   found() {

@@ -55,6 +55,7 @@ export class SearchPanel extends Component<Props> {
           type="text"
           className={style.searchInput}
           placeholder="type to search..."
+          size={1}
           value={this.state.value}
           onChange={this.change}
         />

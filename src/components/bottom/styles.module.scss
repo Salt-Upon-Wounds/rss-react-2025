@@ -4,9 +4,17 @@
   list-style: none;
   padding: 0;
   gap: 5px;
+  max-height: 60vh;
+  overflow-y: scroll;
+  margin: 0;
 }
 
 .rotate {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  height: 30%;
   animation: spinner 1.5s linear infinite;
 }
 
@@ -20,4 +28,6 @@
   border: 1px solid black;
   border-radius: 10px;
   padding: 10px;
+  background-color: wheat;
+  font-weight: 600;
 }
