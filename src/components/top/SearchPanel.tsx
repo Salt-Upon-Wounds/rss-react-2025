@@ -1,4 +1,4 @@
-import { ChangeEvent, Component } from 'react';
+import { ChangeEvent, Component, KeyboardEventHandler } from 'react';
 import style from './styles.module.scss';
 
 interface Props {
@@ -47,6 +47,12 @@ export class SearchPanel extends Component<Props> {
     this.setState({ value: e.target.value });
   };
 
+  handleKeyDown: KeyboardEventHandler<HTMLInputElement> = (e) => {
+    if (e.key === 'Enter') {
+      this.search();
+    }
+  };
+
   render() {
     if (this.state.err) throw new Error('test error');
     return (
@@ -58,6 +64,7 @@ export class SearchPanel extends Component<Props> {
           size={1}
           value={this.state.value}
           onChange={this.change}
+          onKeyDown={this.handleKeyDown}
         />
         <button className={style.searchButton} onClick={this.search}>
           Search
