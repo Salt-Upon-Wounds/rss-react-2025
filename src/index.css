@@ -2,6 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-size: 100%;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -26,8 +27,21 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  justify-content: center;
   min-height: 100vh;
+  background-image: url("./assets/wall.webp");
+  background-color: #5c956a;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  justify-content: end;
+  align-items: self-start;
+  gap: 5px;
 }
 
 h1 {
@@ -54,6 +68,19 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+button {
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: burlywood;
+  transition: background-color 0.5s;
+  border: 1px black solid;
+}
+button:hover {
+  background-color: sandybrown;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -61,8 +88,5 @@ button:focus-visible {
   }
   a:hover {
     color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
   }
 }

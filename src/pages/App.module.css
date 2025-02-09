@@ -1,0 +1,31 @@
+body {
+  width: 100%;
+}
+
+#root {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.header {
+  margin: 5px;
+  font-size: 190%;
+  text-align: center;
+  color: sandybrown;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.main {
+  flex-grow: 1;
+  flex-direction: column;
+  max-width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
