@@ -10,7 +10,7 @@
 }
 
 .rotate {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   margin-inline: auto;
@@ -30,4 +30,13 @@
   padding: 10px;
   background-color: wheat;
   font-weight: 600;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: black;
+  }
 }

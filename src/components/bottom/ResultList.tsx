@@ -43,12 +43,17 @@ export function ResultList(props: Props) {
             </li>
           );
         })}
-        <Pagination
-          page={props.page}
-          length={Math.ceil(result[0].all / 10)}
-          rerender={props.rerender}
-        ></Pagination>
       </>
+    );
+  }
+
+  function pages() {
+    return (
+      <Pagination
+        page={props.page}
+        length={Math.ceil(result[0].all / 10)}
+        rerender={props.rerender}
+      ></Pagination>
     );
   }
 
@@ -57,12 +62,15 @@ export function ResultList(props: Props) {
   }
 
   return (
-    <ul className={style.wrapper}>
-      {loading ? (
-        <img src={spinner} alt="loading..." className={style.rotate} />
-      ) : (
-        final()
-      )}
-    </ul>
+    <>
+      <ul className={style.wrapper}>
+        {loading ? (
+          <img src={spinner} alt="loading..." className={style.rotate} />
+        ) : (
+          final()
+        )}
+      </ul>
+      {loading ? '' : pages()}
+    </>
   );
 }

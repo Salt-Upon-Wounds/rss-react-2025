@@ -7,19 +7,6 @@
   height: 20vh;
   flex-wrap: wrap;
 
-  button {
-    height: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: burlywood;
-    transition: background-color 0.5s;
-    border: 1px black solid;
-  }
-  button:hover {
-    background-color: sandybrown;
-  }
-
   .search-input {
     background-color: wheat;
     border: 2px black solid;

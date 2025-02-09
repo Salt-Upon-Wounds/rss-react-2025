@@ -36,11 +36,11 @@ body {
 }
 
 #root {
+  width: 100%;
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
-  justify-content: center;
-  align-items: center;
+  justify-content: end;
+  align-items: self-start;
   gap: 5px;
 }
 
@@ -68,6 +68,19 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+button {
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: burlywood;
+  transition: background-color 0.5s;
+  border: 1px black solid;
+}
+button:hover {
+  background-color: sandybrown;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -75,8 +88,5 @@ button:focus-visible {
   }
   a:hover {
     color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
   }
 }
